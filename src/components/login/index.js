@@ -3,26 +3,27 @@ import Logo from '../../assets/stamps.png';
 
 import './styles.css';
 
-export const LoginButton = ({ text, user, onClickHandler }) => {
+export const LoginButton = ({ disabled, handleSubmit, text, type }) => {
   return (
     <p>
-      <button className='green-button' onClick={() => onClickHandler(user)}>
+      <button className='green-button' disabled={disabled} type={type} onClick={handleSubmit}>
         {text.toUpperCase()}
       </button>
     </p>
   );
 }
 
-export const LoginInput = ({ label, inputType, inputName, required, value, changeHandler }) => {
+export const LoginInput = ({ placeholder, type, name, required, value, onChange, onBlur }) => {
   return (
     <p>
       <input className='stretched-input'
-        type={inputType}
-        name={inputName}
+        type={type}
+        name={name}
         required={required}
-        placeholder={label}
+        placeholder={placeholder}
         value={value}
-        onChange={(e) => changeHandler(e)}
+        onChange={onChange}
+        onBlur={onBlur}
       />
     </p>
   );
@@ -37,16 +38,18 @@ export const LoginLogo = () => {
 }
 
 LoginButton.propTypes = {
+  disabled: PropTypes.bool,
+  handleSubmit: PropTypes.func,
   text: PropTypes.string,
-  user: PropTypes.object,
-  onClickHandler: PropTypes.func
+  type: PropTypes.string
 };
 
 LoginInput.propTypes = {
-  label: PropTypes.string,
-  inputType: PropTypes.string,
-  inputName: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string,
+  name: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string,
-  changeHandler: PropTypes.func
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func
 };
