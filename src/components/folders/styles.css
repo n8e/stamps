@@ -1,0 +1,54 @@
+.folder-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.folder-add-topic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 30px;
+}
+
+.folder-add-topic-input {
+  border: 1px solid #000;
+  border-radius: 15px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  outline: none;
+  padding: 0 15px 0 15px;
+}
+
+.folder-add-topic-icon {
+  border-radius: 15px;
+}
+
+.folder-add-topic-icon:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.folder-topics-container {
+  margin-top: 40px;
+}
+
+.folder-topic {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+  justify-content: left;
+  padding: 0 10px;
+}
+
+.folder-topic span {
+  margin-left: 15px;
+}
+
+.folder-active {
+  background-color: #000;
+  color: #fff;
+}

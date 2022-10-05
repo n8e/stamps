@@ -1,0 +1,26 @@
+.green-button {
+  background-color: #5BBE83;
+  border-radius: 30px;
+  color: #FFF;
+  font-size: large;
+  font-weight: 600;
+  height: 60px;
+  width: 100%;
+}
+
+.stretched-input {
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+

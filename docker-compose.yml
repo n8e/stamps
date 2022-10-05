@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+  imago:
+    build:
+      context: .
+      dockerfile: 'Dockerfile'
+    environment:
+      REACT_APP_PIXABAY_KEY: "30360906-a28c9c22f705f8e20ccc24c07"
+    ports:
+      - '3000:80'
+    volumes:
+      - ./:/frontend
