@@ -7,6 +7,6 @@ services:
     environment:
       REACT_APP_PIXABAY_KEY: "30360906-a28c9c22f705f8e20ccc24c07"
     ports:
-      - '3000:3000'
+      - '8080:3000'
     volumes:
       - ./:/frontend

@@ -1,4 +1,4 @@
-# fly.toml file generated for stamps on 2022-10-05T23:23:55+03:00
+# fly.toml file generated for stamps on 2022-10-06T07:49:36+03:00
 
 app = "stamps"
 kill_signal = "SIGINT"
@@ -6,7 +6,7 @@ kill_timeout = 5
 processes = []
 
 [build]
-  image = "natemmartin/stamps-imago:latest"
+  image = "natemmartin/stamps:latest"
 
 [env]
 
