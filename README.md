@@ -1,4 +1,5 @@
 # Stamps
+[https://stamps.fly.dev/](https://stamps.fly.dev/)
 
 This application is built with React Js v.18 with a login feature and an image view feature, with images fetched from https://pixabay.com/api/.
 
@@ -15,6 +16,43 @@ const Users = [{
 ```
 
 It uses [Formik](https://formik.org/docs/overview) forms to control both inputs by supplying them with initial values and managing `onChange` and `onBlur` events. Formik also manages the validation of input fields so that should one enter an invalid email address, they are immediately alerted.
+
+## Getting Started
+
+Setting up can be done in one of two ways:
+
+### 1 Locally (without docker)
+
+Install dependencies and start the app
+```
+npm ci && npm start
+```
+Access the app on [http://localhost:3000/](http://localhost:3000/)
+
+ ### 2. Locally (with docker)
+
+ ```
+ docker build -t stamps:latest .
+ ```
+ Then run for the docker container:
+ ```
+docker-compose build stampservice && docker-compose up -d
+ ```
+Access the app on [http://localhost:80/](http://localhost:80/)
+
+## Deployment
+
+Deployment is done on [fly.io](https://fly.io). This service requires that the app is ran on Docker. There is an auto-generated file at the root of the project(`./fly.toml`). This file contains the configuration for fly to deploy the app.
+Generate it by running:
+```
+flyctl launch --image natemmartin/stamps:latest
+```
+#### Note:
+(`natemmartin/stamps:latest` is a docker image I have pushed to Docker Hub after building it locally)
+
+```
+docker build -t natemmartin/stamps:latest . && docker push natemmartin/stamps:latest
+```
 
 ## Requirements
 
